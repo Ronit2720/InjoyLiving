@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(36,26,26,1) 100%);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+   
+}
+.bg{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    
+}
+
+.nav{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60%;       
+}
+.nav a{
+    width: 30px;
+    text-decoration: none;
+}
+
+
+.icon{
+    width: 30px;
+}
+
+.nav img{
+    margin: 10px;
+    width: 200px;
+    padding: 10px;
+}
+
+.elem{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero img{
+    width: 150px;
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+.cont h4{
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    
+}
+
+.cont h1{
+    font-size: 50px;
+    font-family: 'Gloock', serif;
+    letter-spacing: 10px;
+    background: -webkit-linear-gradient(#ffffff, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+/* button */
+.btn{
+    margin-top: 30px;
+    display: flex;
+    gap: 60px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #cc8350;
+    font-size: 20px;
+}
+
+button {
+    position: relative;
+    padding: 15px 45px;
+    background: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    color: #181818;
+    border: 1px solid #FEC195;
+    border-radius: 8px;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, .2));
+    transition: all ease-in-out .3s;
+  }
+  
+  
+
+
+/* subscribe button*/
+.input-container {
+  position: relative;
+}
+
+.input {
+  padding: 10px;
+  height: 40px;
+  border: 2px solid #ffffff;
+  border-top: none;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  box-shadow: 7px 7px 0px 0px #ffffff;
+  transition: all 0.5s;
+}
+
+.input:focus {
+  box-shadow: none;
+  transition: all 0.5s;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #ffffff;
+  transition: all 0.5s;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.input-container .topline {
+  position: absolute;
+  content: "";
+  background-color: #fdfdfd;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .topline {
+  width: 70%;
+  transition: all 0.5s;
+}
+
+.input-container .underline {
+  position: absolute;
+  content: "";
+  background-color: #ffffff;
+  width: 0%;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .underline {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus ~ .label {
+  top: -10px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+#popup{
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  height: 300px;
+  box-shadow: 0 10px 30px rgba(255, 254, 254, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1% 4%;
+  text-align: center;
+  gap: 30px;
+  background-color: #2b2a2a;
+  border-radius: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#popup.active{
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.container#blur.active{
+  filter: blur(4px);
+  pointer-events: none;
+  user-select: none;
+}
